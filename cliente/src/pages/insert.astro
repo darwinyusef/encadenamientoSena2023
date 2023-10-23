@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+    <Layout title="Formulario con Bootstrap">
+      <main>
+        <div class="container">
+          <div class="container mb-3" style="zoom:0.8">
+            <div class="text-center mt-5">
+              <img
+                src="https://tramiteinformativo.com/wp-content/uploads/2022/08/logo-sena-verde-png-sin-fondo.png"
+                alt="Logo"
+                class="img-fluid"
+                style="max-width: 180px;"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+           
+            <h1>Formulario de Ejemplo</h1>
+            <p>Por favor, completa el siguiente formulario.</p>
+          </div>
+
+          <form>
+            <div class="mb-3">
+              <label for="select1" class="form-label"
+                >Selecciona opción 1:</label
+              >
+              <select class="form-select" id="select1" name="select1">
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="select2" class="form-label"
+                >Selecciona opción 2:</label
+              >
+              <select class="form-select" id="select2" name="select2">
+                <option value="opcion4">Opción 4</option>
+                <option value="opcion5">Opción 5</option>
+                <option value="opcion6">Opción 6</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="input1" class="form-label">Campo de texto 1:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="input1"
+                name="input1"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="input2" class="form-label">Campo de texto 2:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="input2"
+                name="input2"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="input3" class="form-label">Campo de texto 3:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="input3"
+                name="input3"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label>Selecciona una opción:</label><br />
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="opcionRadio"
+                  id="radio1"
+                  value="opcionRadio1"
+                />
+                <label class="form-check-label" for="radio1">Opción 1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="opcionRadio"
+                  id="radio2"
+                  value="opcionRadio2"
+                />
+                <label class="form-check-label" for="radio2">Opción 2</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </main>
+    </Layout>

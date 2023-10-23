@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  image: string;
+  btn: string; 
+  typeBtn: string; 
+}
+
+const { image, title, body, btn, typeBtn } = Astro.props;
+---
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="content-finaly mb-2">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="text-center">
+          <img src={image} alt="party" class="mb-4" />
+          <h4 class={`text-center text-${typeBtn}`}>
+            {title}
+          </h4>
+          <p>{body}</p>
+        </div>
+        <div class="content-finaly mt-4">
+          <button type="button" class={`btn btn-${typeBtn}`} data-bs-dismiss="modal"
+            >{btn}</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .content-finaly {
+    display: flex;
+    justify-content: right;
+  }
+</style>

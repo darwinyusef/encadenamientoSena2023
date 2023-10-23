@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Buscador al Estilo de Google">
+  <main>
+    <div class="container mb-3" style="zoom:0.8">
+      <div class="text-center mt-5">
+        <img
+          src="https://tramiteinformativo.com/wp-content/uploads/2022/08/logo-sena-verde-png-sin-fondo.png"
+          alt="Logo"
+          class="img-fluid"
+          style="max-width: 180px;"
+        />
+      </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+      <div class="row content-title">
+        <h3 class="text-success">Bienvenido: Pepito perez</h3>
+        <h5 class="text-left">
+          Selecciona uno de nuestros programas disponibles
+        </h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          reprehenderit illum obcaecati rem animi est autem rerum quod ducimus
+          vitae perspiciatis, ipsa, accusamus maiores pariatur sint sapiente
+          ratione, doloribus saepe!
+        </p>
+      </div>
+      <!-- primary and secondary modify  -->
+      <header class="bg-secondary text-white p-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Icono a la izquierda (puedes cambiar la clase del icono según tu elección) -->
+              <i class="bi bi-house-door"></i>
+              <!-- Nombre de la institución -->
+              <h5>Genera el registro o la preinscripción</h5>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card mb-1">
+            <img
+              src="https://picsum.photos/300/300"
+              class="card-img-top disabled"
+              alt="Opción 1"
+            />
+            <div class="d-grid gap-1 card-body text-center">
+              <button
+                class="btn btn-secondary btn-lg btn-block"
+                disabled="true" class="disabled"
+              >
+                <h1 class="card-title">Registrar Asitencia</h1></button
+              > <p class="text-danger">Actualmente ya esta registrado</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-1">
+            <img
+              src="https://picsum.photos/300/300"
+              class="card-img-top"
+              alt="Opción 1"
+            />
+            <div class="d-grid gap-1 card-body text-center">
+              <button
+                class="btn btn-outline-primary btn-lg btn-block"
+              >
+                <h1 class="card-title">Preinscripción</h1></button
+              > <p class="text-success">Selecciona el programa de preferencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .bg-primary,
+  .bg-secondary {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    filter: grayscale(1) contrast(50%);
+  }
+</style>
