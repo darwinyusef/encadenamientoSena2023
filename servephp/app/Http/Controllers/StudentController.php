@@ -217,6 +217,8 @@ class StudentController extends Controller
             $rules['email'] = 'required|email|unique:students';
         }
         $customMessage = $this->allMessages();
+
+        // las validaciones con email incluido
         $validation = Validator::make($req->all(), $rules, $customMessage);
 
         //here 422 means unprocessable entity
@@ -227,10 +229,17 @@ class StudentController extends Controller
             );
         }
 
+        if($req->accept) {
+            $personal_data = date('Y-m-d H:i:s');
+        } else {
+            $personal_data = null; 
+        }
+
         $upStudent = Student::where('uuid', $uuid)->update([
             'email' => $req->email,
             'phone' => $req->phone,
             'phone_attendant' => $req->phone_attendant,
+            'personal_data' => $personal_data,
             'active' => 1,
             'asistencia' => date('Y-m-d H:i:s'),
             'register' => 'REGISTERED',

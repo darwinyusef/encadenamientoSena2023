@@ -9,6 +9,8 @@ async function searchEstudents(e) {
 
   let valInSearch = validator.isNumeric(inSearch, { no_symbols: true });
 
+  
+
   if (valInSearch) {
     const response = await fetch(`${urlFinal}/api/search/${inSearch}`);
     const students = await response.json();

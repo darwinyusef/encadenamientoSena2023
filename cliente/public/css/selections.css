@@ -3,14 +3,6 @@
   border-top-right-radius: 10px;
 }
 
-.disabled {
-  cursor: not-allowed;
-  filter: grayscale(1) contrast(70%);
-}
-.btn-disabled {
-  cursor: not-allowed !important;
-}
-
 .card {
   margin-top: 20px;
   cursor: pointer;
@@ -18,21 +10,12 @@
 
 .card:hover {
   margin-top: 20px;
-  filter: drop-shadow(1px 2px 2px gray);
+  filter: drop-shadow(1px 3px 2px gray);
   transition: filter 200ms ease 0s;
 }
 
-.text-dark {
-  color: rgb(221, 221, 221) !important;
-}
 
-.btn-outline-dark {
-  border-color: #d3d3d3 !important;
-}
 
-.btn-outline-dark h1 {
-  color: rgb(221, 221, 221);
-}
 
 h1 {
   font-size: 35px;
@@ -46,3 +29,22 @@ h1 {
   font-size: 15px;
   margin-bottom: -5px;
 }
+
+.disabled-card {
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
+.disabled-card img, .disabled-card button, .disabled-card p {
+  cursor: not-allowed !important;
+}
+
+.disabled-card .btn-outline-success {
+  border-color: #d3d3d3 !important;
+}
+
+.disabled-card .btn-outline-success > h1 {
+  color: rgb(221, 221, 221) !important;
+}
+
+
