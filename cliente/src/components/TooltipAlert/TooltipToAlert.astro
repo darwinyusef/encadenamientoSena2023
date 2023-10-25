@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  color: string;
+}
+
+const { title, color } = Astro.props;
+---
+
+<div id="to-alert" class="container-fluid principal-alert hidden">
+  <div class="row">
+    <div class={`aspect-alert alert alert-${color}`} role={color}>
+      {title}
+      <button id="btn-alert" type="button" class="btn-close" aria-label="Close"
+      ></button>
+    </div>
+  </div>
+</div>
+
+<script src="./TooltipToAlert.js"></script>
+
+<style>
+  .principal-alert {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .aspect-alert {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 440px;
+  }
+</style>

@@ -1,0 +1,187 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Formulario con Bootstrap">
+  <main>
+    <div class="container">
+      <div class="container mb-3" style="zoom:0.8">
+        <div class="text-center mt-5">
+          <img
+            src="https://tramiteinformativo.com/wp-content/uploads/2022/08/logo-sena-verde-png-sin-fondo.png"
+            alt="Logo"
+            class="img-fluid"
+            style="max-width: 180px;"
+          />
+        </div>
+      </div>
+      <div class="text-center">
+        <h1>Registro de un estudiante</h1>
+        <p>Por favor, completa el siguiente formulario.</p>
+      </div>
+
+      <div id="hiddenTitle" class="row mb-5 content-title">
+        <h3 class="text-success">Bienvenido: <span id="all-name">...Cargando</span></h3>
+
+        <h5 class="text-left">
+          Para vincularse debe registrar cada uno de los campos aqui descritos
+          algunos de ellos son requeridos
+        </h5>
+      </div>
+
+      <form id="loginForm">
+        <div id="hidden1" class="row">
+          <div class="col-xl-6 col-12">
+            <div class="mb-3">
+              <label for="name" class="form-label">Escriba sus nombres:</label>
+              <input type="text" class="form-control" id="name" name="name" />
+              <p id="error-name" class="error text-danger"></p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-12">
+            <div class="mb-3">
+              <label for="last" class="form-label">Escriba sus apellidos:</label
+              >
+              <input type="text" class="form-control" id="last" name="last" />
+              <p id="error-last" class="error text-danger"></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="hidden2" class="row">
+          <div class="col-xl-6 col-12">
+            <div class="mb-3">
+              <label for="typedocument" class="form-label"
+                >Tipo de Documento:</label
+              >
+              <select class="form-select" id="typedocument" name="typedocument">
+                <option value="">...Seleccione</option>
+                <option value="TI">T.I.</option>
+                <option value="CC">C.C.</option>
+                <option value="CE">C.E</option>
+                <option value="PS">P.S.</option>
+              </select>
+              <p id="error-typedocument" class="error text-danger"></p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-12">
+            <div class="mb-3">
+              <label for="omeDocument" class="form-label"
+                >Número de documento:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="omeDocument"
+                name="omeDocument"
+              />
+              <p id="error-omeDocument" class="error text-danger"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-6 col-12">
+            <div class="mb-3">
+              <label for="phone" class="form-label">Número de Celular:</label>
+              <input type="text" class="form-control" id="phone" name="phone" />
+              <p id="error-phone" class="error text-danger"></p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-12">
+            <div class="mb-3">
+              <label for="phone_attendant" class="form-label"
+                >Celular del acudiente:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="phone_attendant"
+                name="phone_attendant"
+              />
+              <p id="error-phone_attendant" class="error text-danger"></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="hidden3" class="mb-3">
+          <label for="ie" class="form-label"
+            >Institución Educativa donde estudias:</label
+          >
+
+          <select class="form-select" id="ie" name="ie">
+            <option value="">...Seleccione</option>
+            <option value="AVELINO SALDARRIAGA">AVELINO SALDARRIAGA</option>
+            <option value="CARLOS PEREZ MEJIA">CARLOS PEREZ MEJIA</option>
+            <option value="CENTENARIO DE BELLO">CENTENARIO DE BELLO</option>
+            <option value="CIUDAD DE ITAGUI">CIUDAD DE ITAGUI</option>
+            <option value="CONCEJO MPAL DE ITAGUI"
+              >CONCEJO MPAL DE ITAGUI</option
+            >
+            <option value="DIEGO ECHAVARRIA MISAS"
+              >DIEGO ECHAVARRIA MISAS</option
+            >
+            <option value="FE Y ALEGRIA SANTO DOMINGO SAVIO"
+              >FE Y ALEGRIA SANTO DOMINGO SAVIO</option
+            >
+            <option value="FELIPE DE RESTREPO">FELIPE DE RESTREPO</option>
+            <option value="JOSE ROBERTO VASQUEZ">JOSE ROBERTO VASQUEZ</option>
+            <option value="JUAN N CADAVID">JUAN N CADAVID</option>
+            <option value="LOMA LINDA">LOMA LINDA</option>
+            <option value="CEFIT (SECRETARIA DE EDUCACIÓN ENVIGADO)"
+              >CEFIT (SECRETARIA DE EDUCACIÓN ENVIGADO)</option
+            >
+            <option value="VILLA FLORA">SAN JOSE OBRERO</option>
+            <option value="otro">OTRO</option>
+          </select>
+          <p id="error-ie" class="error text-danger"></p>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Escriba su Email:</label>
+          <input type="text" class="form-control" id="email" name="email" />
+          <p id="error-email" class="error text-danger"></p>
+        </div>
+
+        <div class="mb-5">
+          <label>Acepta el uso de datos personales:</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input checkbox"
+              type="radio"
+              name="accept"
+              id="accept1"
+              value="true"
+            />
+            <label class="form-check-label" for="radio1">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input checkbox"
+              type="radio"
+              name="accept"
+              id="accept2"
+              value="false"
+            />
+            <label class="form-check-label" for="radio2">No</label>
+          </div>
+          <p id="error-accept" class="error text-danger"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</Layout>
+
+
+
+<script type="text/javascript" src="./global/getTimeStamp.js"></script>
+<script type="text/javascript" src="./js/validator.min.js"></script>
+<script type="text/javascript" src="./js/insert.js"></script>

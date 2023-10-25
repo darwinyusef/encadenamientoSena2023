@@ -3,11 +3,12 @@ interface Props {
   title: string;
   body: string;
   image: string;
-  btn: string; 
-  typeBtn: string; 
+  btn: string;
+  typeBtn: string;
+  send: string;
 }
 
-const { image, title, body, btn, typeBtn } = Astro.props;
+const { image, title, body, btn, typeBtn, send } = Astro.props;
 ---
 
 <!-- Modal -->
@@ -35,15 +36,21 @@ const { image, title, body, btn, typeBtn } = Astro.props;
           </h4>
           <p>{body}</p>
         </div>
-        <div class="content-finaly mt-4">
-          <button type="button" class={`btn btn-${typeBtn}`} data-bs-dismiss="modal"
-            >{btn}</button
+        <div class="content-finaly mt-4 d-grid gap-2">
+          <a
+            id="btn-send-in-modal"
+            data-send={send}
+            type="button"
+            class={`btn btn-${typeBtn}`}
+            data-bs-dismiss="modal">{btn}</a
           >
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript" src="./js/component.modalms.js"></script>
 
 <style>
   .content-finaly {

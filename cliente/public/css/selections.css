@@ -1,0 +1,48 @@
+.bg-secondary {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  filter: grayscale(1) contrast(70%);
+}
+.btn-disabled {
+  cursor: not-allowed !important;
+}
+
+.card {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.card:hover {
+  margin-top: 20px;
+  filter: drop-shadow(1px 2px 2px gray);
+  transition: filter 200ms ease 0s;
+}
+
+.text-dark {
+  color: rgb(221, 221, 221) !important;
+}
+
+.btn-outline-dark {
+  border-color: #d3d3d3 !important;
+}
+
+.btn-outline-dark h1 {
+  color: rgb(221, 221, 221);
+}
+
+h1 {
+  font-size: 35px;
+}
+.double-text {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.small-text {
+  font-size: 15px;
+  margin-bottom: -5px;
+}

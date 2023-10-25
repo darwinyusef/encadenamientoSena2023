@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AsistenciaRegister from "../../components/AsistenciaRegister/AsistenciaRegister.astro";
+---
+
+<Layout title="Selecciona una opción actual">
+  <link rel="stylesheet" href="./css/selections.css" />
+
+  <main>
+    <div class="container mb-3" style="zoom:0.8">
+      <div class="text-center mt-5">
+        <img
+          src="https://tramiteinformativo.com/wp-content/uploads/2022/08/logo-sena-verde-png-sin-fondo.png"
+          alt="Logo"
+          class="img-fluid"
+          style="max-width: 180px;"
+        />
+      </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+      <div class="row content-title">
+        <h3 class="text-success">
+          Bienvenido: <span id="allname-selects"></span>
+        </h3>
+        <h5 class="text-left">
+          Selecciona uno de estos items para continuar con el proceso de
+          asistencia y registro
+        </h5>
+        <p>
+          El registro en nuestra plataforma con asistencia es esencial para
+          verificar su identidad, personalizar la experiencia,
+          garantizar la privacidad y la seguridad de datos.
+        </p>
+      </div>
+      <!-- primary and secondary modify  -->
+      <header class="bg-secondary text-white p-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Icono a la izquierda (puedes cambiar la clase del icono según tu elección) -->
+              <i class="bi bi-house-door"></i>
+              <!-- Nombre de la institución -->
+              <h5>Genera el registro o la preinscripción</h5>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card mb-1">
+            <img
+              id="card-image-asistencia"
+              src="https://picsum.photos/300/300"
+              class="card-img-top"
+              alt="Opción 1"
+            />
+            <div class="d-grid card-body text-center">
+              <p id="card-p-asistencia" class="text-danger">Actualmente no ha registrado asistencia</p>
+              <button id="asistenciasModal"
+                class="btn btn-outline-danger btn-lg btn-block"
+              >
+                <h1 id="card-h1-asistencia" class="card-title">Registrarse</h1></button
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-1">
+            <img
+              id="card-image-registro"
+              src="https://picsum.photos/300/300"
+              class="card-img-top disabled"
+              alt="Opción 1"
+            />
+            <div class="d-grid card-body text-center">
+              <p id="card-p-registro" class="text-danger">Actualización de datos</p>
+              <button id="card-button-registro" class="btn btn-outline-danger btn-lg btn-block disabled" disabled="true">
+                <h1 id="card-h1-registro" class="card-title">Actualizar</h1></button
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-1">
+            <img
+              src="https://picsum.photos/300/300"
+              class="card-img-top disabled"
+              alt="Opción 1"
+            />
+            <div class="d-grid card-body text-center">
+              <p class="text-dark">Selecciona los programas</p>
+              <button class="btn btn-outline-primary btn-lg btn-block disabled" disabled="true">
+                <h1 class="card-title">Preinscripción</h1></button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <AsistenciaRegister />
+
+  <script type="text/javascript" src="./js/selects.js"></script>
+</Layout>
