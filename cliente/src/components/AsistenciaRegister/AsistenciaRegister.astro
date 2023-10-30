@@ -21,72 +21,102 @@
         </div>
         <div class="text-center">
           <img src="./table.png" alt="party" class="mb-4" />
-          <h4 class="text-center">
-             Registro de Asistencia
-          </h4>
+          <h4 class="text-center">Registro de Asistencia</h4>
           <p>Diligencia el formulario a continuación:</p>
         </div>
         <div class="text-center">
           <form id="loginForm">
-            <div id="hidden1" class="row">
+            <div class="row">
               <div class="col-xl-12 col-12">
                 <div class="mb-3">
-                  <label for="allname" class="form-label"
+                  <label for="email" class="form-label"
                     >Escribe tu Email:</label
                   >
                   <input
-                    type="text"
+                    type="email"
                     class="form-control"
-                    id="allname"
-                    name="allname"
+                    id="email"
+                    name="email"
+                    placeholder="Escribe tu Email"
                   />
-                  <p id="error-allname" class="error text-danger"></p>
+                  <p id="error-email" class="error text-danger"></p>
                 </div>
               </div>
+
               <div class="col-xl-12 col-12">
                 <div class="mb-3">
                   <label for="phone" class="form-label"
                     >Escribe tu télefono:</label
                   >
                   <input
-                    type="text"
+                    type="number"
                     class="form-control"
                     id="phone"
                     name="phone"
+                    placeholder="Número de Télefono / Celular"
                   />
                   <p id="error-phone" class="error text-danger"></p>
                 </div>
               </div>
-              
+
               <div class="col-xl-12 col-12">
                 <div class="mb-3">
                   <label for="phone_attendant" class="form-label"
                     >Escribe el télefono de un acudiente:</label
                   >
                   <input
-                    type="text"
+                    type="number"
                     class="form-control"
                     id="phone_attendant"
                     name="phone_attendant"
+                    placeholder="Número de Télefono / Celular del Acudiente"
                   />
                   <p id="error-phone_attendant" class="error text-danger"></p>
                 </div>
               </div>
+
+              <div class="col-xl-12 col-12">
+                <div class="mb-2">
+                  <label>Acepta el uso de datos personales:</label><br />
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input checkbox"
+                      type="radio"
+                      name="accept"
+                      id="accept1"
+                      value="true"
+                    />
+                    <label class="form-check-label" for="radio1">Si</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input checkbox"
+                      type="radio"
+                      name="accept"
+                      id="accept2"
+                      value="false"
+                    />
+                    <label class="form-check-label" for="radio2">No</label>
+                  </div>
+                  <p id="error-accept" class="error text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="content-finaly mt-4 d-grid gap-2">
+              <button
+                id="btn-register-in-asistencia"
+                type="button"
+                class="btn btn-success btn-block"
+                data-bs-dismiss="modal">Registrar Asistencia</button
+              >
             </div>
           </form>
-          <div class="content-finaly mt-4 d-grid gap-2">
-            <button
-              id="btn-asistencia-in-modal"
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal">Registrar Asistencia</button
-            >
-          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <script type="text/javascript" src="./js/validator.min.js"></script>
   <script type="text/javascript" src="./js/component.asistencia.js"></script>
 
   <style>

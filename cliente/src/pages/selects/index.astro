@@ -29,11 +29,11 @@ import AsistenciaRegister from "../../components/AsistenciaRegister/AsistenciaRe
         </h5>
         <p>
           El registro en nuestra plataforma con asistencia es esencial para
-          verificar su identidad, personalizar la experiencia,
-          garantizar la privacidad y la seguridad de datos.
+          verificar su identidad, personalizar la experiencia, garantizar la
+          privacidad y la seguridad de datos.
         </p>
       </div>
-      <!-- primary and secondary modify  -->
+      <!-- success and secondary modify  -->
       <header class="bg-secondary text-white p-2">
         <div class="container">
           <div class="row">
@@ -48,50 +48,58 @@ import AsistenciaRegister from "../../components/AsistenciaRegister/AsistenciaRe
       </header>
 
       <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div id="card-asistencia" class="col-md-4 disabled-card">
           <div class="card mb-1">
             <img
-              id="card-image-asistencia"
               src="https://picsum.photos/300/300"
               class="card-img-top"
               alt="Opción 1"
             />
             <div class="d-grid card-body text-center">
-              <p id="card-p-asistencia" class="text-danger">Actualmente no ha registrado asistencia</p>
-              <button id="asistenciasModal"
-                class="btn btn-outline-danger btn-lg btn-block"
+              <p id="card-p-asistencia" class="text-success">Actualmente no ha registrado asistencia</p>
+              <button
+                id="card-button-asistencia"
+                class="btn btn-outline-success btn-lg btn-block"
+                disabled="true"
               >
-                <h1 id="card-h1-asistencia" class="card-title">Registrarse</h1></button
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-1">
-            <img
-              id="card-image-registro"
-              src="https://picsum.photos/300/300"
-              class="card-img-top disabled"
-              alt="Opción 1"
-            />
-            <div class="d-grid card-body text-center">
-              <p id="card-p-registro" class="text-danger">Actualización de datos</p>
-              <button id="card-button-registro" class="btn btn-outline-danger btn-lg btn-block disabled" disabled="true">
-                <h1 id="card-h1-registro" class="card-title">Actualizar</h1></button
+                <h1 class="card-title">Registrarse</h1></button
               >
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div id="card-registro" class="col-md-4 disabled-card">
           <div class="card mb-1">
             <img
               src="https://picsum.photos/300/300"
-              class="card-img-top disabled"
+              class="card-img-top"
               alt="Opción 1"
             />
             <div class="d-grid card-body text-center">
-              <p class="text-dark">Selecciona los programas</p>
-              <button class="btn btn-outline-primary btn-lg btn-block disabled" disabled="true">
+              <p id="card-p-registro" class="text-success">Actualización de datos</p>
+              <button
+                id="card-button-registro"
+                class="btn btn-outline-success btn-lg btn-block"
+                disabled="true"
+              >
+                <h1 class="card-title">Actualizar</h1></button
+              >
+            </div>
+          </div>
+        </div>
+        <div id="card-seleccion" class="col-md-4 disabled-card">
+          <div class="card mb-1">
+            <img
+              src="https://picsum.photos/300/300"
+              class="card-img-top"
+              alt="Opción 1"
+            />
+            <div class="d-grid card-body text-center">
+              <p class="text-success">Selecciona los programas</p>
+              <button
+                id="card-button-seleccion"
+                class="btn btn-outline-success btn-lg btn-block"
+                disabled="true"
+              >
                 <h1 class="card-title">Preinscripción</h1></button
               >
             </div>
